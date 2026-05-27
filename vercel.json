@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd miniapp-frontend && npm run build",
+  "devCommand": "cd miniapp-frontend && npm run dev",
+  "installCommand": "cd miniapp-frontend && npm install",
+  "outputDirectory": "miniapp-frontend/.next",
+  "rootDirectory": "miniapp-frontend"
+}
