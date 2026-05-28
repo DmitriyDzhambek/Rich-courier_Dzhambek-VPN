@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, Server, User, Users, MessageCircle } from 'lucide-react';
+import { Home, Anchor, User, Users, MessageCircle } from 'lucide-react';
 
 type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support';
 
@@ -11,7 +11,7 @@ interface BottomNavigationProps {
 
 const tabs = [
   { id: 'home' as TabType, label: 'Главная', icon: Home },
-  { id: 'servers' as TabType, label: 'Серверы', icon: Server },
+  { id: 'servers' as TabType, label: 'Серверы', icon: Anchor },
   { id: 'cabinet' as TabType, label: 'Кабинет', icon: User },
   { id: 'referrals' as TabType, label: 'Рефералы', icon: Users },
   { id: 'support' as TabType, label: 'Поддержка', icon: MessageCircle },

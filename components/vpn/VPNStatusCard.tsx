@@ -1,6 +1,6 @@
 'use client';
 
-import { ShieldOff, ShieldCheck } from 'lucide-react';
+import { Anchor, Ship } from 'lucide-react';
 
 interface VPNStatusCardProps {
   isConnected: boolean;
@@ -19,20 +19,20 @@ export default function VPNStatusCard({
     <div className="bg-card rounded-2xl p-3 sm:p-4">
       <div className="flex items-center gap-3 mb-4">
         <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-          isConnected ? 'bg-green-500/20' : 'bg-muted'
+          isConnected ? 'bg-primary/20' : 'bg-muted'
         }`}>
           {isConnected ? (
-            <ShieldCheck className="w-5 h-5 text-green-500" />
+            <Ship className="w-5 h-5 text-primary" />
           ) : (
-            <ShieldOff className="w-5 h-5 text-muted-foreground" />
+            <Anchor className="w-5 h-5 text-muted-foreground" />
           )}
         </div>
         <div>
           <p className="font-semibold text-foreground">
-            {isConnected ? 'VPN подключен' : 'VPN не подключен'}
+            {isConnected ? 'На волне!' : 'На якоре'}
           </p>
           <p className="text-sm text-muted-foreground">
-            {isConnected ? 'Ваше соединение защищено' : 'Ваше соединение не защищено'}
+            {isConnected ? 'Плывем безопасно' : 'Корабль стоит в порту'}
           </p>
         </div>
       </div>

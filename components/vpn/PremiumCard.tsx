@@ -1,6 +1,6 @@
 'use client';
 
-import { Crown, ChevronRight } from 'lucide-react';
+import { Compass, ChevronRight } from 'lucide-react';
 
 interface PremiumCardProps {
   onClick: () => void;
@@ -10,16 +10,16 @@ export default function PremiumCard({ onClick }: PremiumCardProps) {
   return (
     <button
       onClick={onClick}
-      className="mx-4 w-[calc(100%-2rem)] bg-card rounded-2xl p-4 flex items-center justify-between"
+      className="w-full bg-gradient-to-r from-card to-primary/10 border border-primary/30 rounded-2xl p-4 flex items-center justify-between hover:border-primary/50 active:scale-[0.98] transition-all"
     >
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-          <Crown className="w-5 h-5 text-primary" />
+          <Compass className="w-5 h-5 text-primary" />
         </div>
         <div className="text-left">
-          <p className="font-semibold text-foreground">Премиум доступ</p>
+          <p className="font-semibold text-foreground">Капитанский доступ</p>
           <p className="text-xs text-muted-foreground">
-            Больше серверов и максимальная скорость
+            Все порты мира и попутный ветер
           </p>
         </div>
       </div>
