@@ -11,28 +11,29 @@ export default function HeroSection() {
           src="/images/courier-bike.png"
           alt="Курьерский электроскутер с зеленой сумкой доставки"
           fill
-          className="object-cover object-[center_60%] opacity-70 mix-blend-soft-light"
+          className="object-cover object-[center_58%] opacity-95"
           priority
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,244,190,0.84),transparent_20%),radial-gradient(circle_at_80%_22%,rgba(255,255,255,0.42),transparent_26%),linear-gradient(180deg,rgba(0,111,104,0.05)_0%,rgba(0,77,64,0.4)_38%,rgba(8,110,118,0.72)_68%,var(--background)_100%)]" />
+        <div className="absolute left-12 top-20 hidden h-72 w-72 rounded-full bg-white/12 blur-[92px] sm:block" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(255,255,255,0.35),transparent_18%),radial-gradient(circle_at_82%_24%,rgba(255,255,255,0.22),transparent_24%),linear-gradient(180deg,rgba(118,217,255,0.3)_0%,rgba(37,194,171,0.35)_35%,rgba(8,110,118,0.72)_68%,var(--background)_100%)]" />
 
         <div className="absolute inset-x-0 bottom-0 h-36 overflow-hidden">
           <div className="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.18),transparent_18%)]" />
-          <div className="absolute inset-x-0 bottom-0 h-full wave-swell opacity-95">
+          <div className="absolute inset-x-0 bottom-0 h-full wave-swell opacity-95 sea-glow">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-              <path d="M0,60 C180,90 340,20 540,60 C760,100 880,10 1200,60 L1200,120 L0,120 Z" fill="#2f9fa9" />
+              <path d="M0,65 C150,100 300,30 520,60 C730,90 860,20 1200,65 L1200,120 L0,120 Z" fill="#3ba6b2" />
             </svg>
           </div>
-          <div className="absolute inset-x-0 bottom-0 h-full wave-swell delay-150 opacity-75">
+          <div className="absolute inset-x-0 bottom-0 h-full wave-swell delay-150 opacity-80">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-              <path d="M0,70 C220,45 380,110 600,70 C820,30 960,85 1200,68 L1200,120 L0,120 Z" fill="#1f8e92" />
+              <path d="M0,72 C220,45 390,110 600,70 C820,30 980,100 1200,68 L1200,120 L0,120 Z" fill="#1e8f92" />
             </svg>
           </div>
-          <div className="absolute inset-x-0 bottom-0 h-full wave-swell delay-300 opacity-40">
+          <div className="absolute inset-x-0 bottom-0 h-full wave-swell delay-300 opacity-45">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-              <path d="M0,80 C210,55 410,95 600,70 C790,45 950,110 1200,80 L1200,120 L0,120 Z" fill="#114d53" />
+              <path d="M0,82 C230,50 430,100 600,70 C770,40 960,90 1200,78 L1200,120 L0,120 Z" fill="#0e5d60" />
             </svg>
           </div>
         </div>

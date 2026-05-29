@@ -18,13 +18,13 @@ export default function AddDevicePage() {
 
         <div className="rounded-[2rem] border border-white/10 bg-white/10 p-5">
           <p className="text-sm leading-6 text-foreground/90">Не видите своё устройство? Откройте приложение для привязки устройства.</p>
-          <p className="mt-3 text-sm text-muted-foreground">Сканируйте QR-код в приложении, чтобы добавить новое устройство. После сканирования обновите экран везде.</p>
+          <p className="mt-3 text-sm text-muted-foreground">Сканируйте QR-код в приложении, чтобы добавить новое устройство. После сканирования обновите данные везде.</p>
 
           <div className="mt-5 rounded-3xl border border-white/15 bg-background/80 p-4 text-center">
             <div className="mx-auto mb-4 flex h-44 w-44 items-center justify-center rounded-3xl border-2 border-dashed border-white/20 bg-[#0f5a53]/70">
               <QrCode className="h-20 w-20 text-primary" />
             </div>
-            <p className="text-sm font-semibold text-foreground">Наведи камеру на QR и после везде обнови.</p>
+            <p className="text-sm font-semibold text-foreground">Наведи камеру на QR и после обновите везде.</p>
             <p className="mt-2 text-xs text-muted-foreground">QR-устройство автоматически подхватится в приложении.</p>
           </div>
         </div>
