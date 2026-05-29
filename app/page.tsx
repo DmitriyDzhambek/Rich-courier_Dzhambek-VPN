@@ -203,13 +203,3 @@ export default function Home() {
     </>
   );
 }
-
-      {renderContent()}
-
-      <BottomNavigation
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-      />
-    </div>
-  );
-}
