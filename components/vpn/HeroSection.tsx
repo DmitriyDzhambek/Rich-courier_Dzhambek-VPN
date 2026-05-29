@@ -6,31 +6,48 @@ import { Palmtree } from 'lucide-react';
 export default function HeroSection() {
   return (
     <div className="relative w-full">
-      <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[340px] overflow-hidden bg-gradient-to-b from-[#72d7ff] via-[#24c6b8] to-[#ffd28a]">
+      <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-h-[360px] overflow-hidden bg-gradient-to-b from-[#7ad4ff] via-[#25c9b8] to-[#ffc37f]">
         <Image
           src="/images/courier-bike.png"
           alt="Курьерский электроскутер с зеленой сумкой доставки"
           fill
-          className="object-cover object-[center_60%] opacity-45 mix-blend-soft-light"
+          className="object-cover object-[center_60%] opacity-70 mix-blend-soft-light"
           priority
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,244,190,0.88),transparent_22%),radial-gradient(circle_at_80%_22%,rgba(255,255,255,0.42),transparent_26%),linear-gradient(180deg,rgba(0,111,104,0.02)_0%,rgba(0,77,64,0.42)_58%,var(--background)_100%)]" />
-        <div className="absolute -right-8 top-2 text-[9rem] leading-none drop-shadow-2xl sm:right-8 sm:text-[11rem]" aria-hidden="true">🌴</div>
-        <div className="absolute left-5 top-12 text-5xl drop-shadow-xl sm:left-12 sm:text-7xl" aria-hidden="true">☀️</div>
-        <div className="absolute bottom-8 left-0 right-0 h-20 bg-gradient-to-t from-[#ffe0a3]/65 via-[#35d5cb]/35 to-transparent" />
-        
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,244,190,0.84),transparent_20%),radial-gradient(circle_at_80%_22%,rgba(255,255,255,0.42),transparent_26%),linear-gradient(180deg,rgba(0,111,104,0.05)_0%,rgba(0,77,64,0.4)_58%,var(--background)_100%)]" />
+
+        <div className="absolute inset-x-0 bottom-0 h-32 overflow-hidden">
+          <div className="absolute inset-x-0 bottom-0 h-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.28),transparent_20%)]" />
+          <div className="absolute inset-x-0 bottom-0 h-full wave-swell opacity-90">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
+              <path d="M0,50 C250,100 350,10 600,40 C850,70 950,12 1200,50 L1200,120 L0,120 Z" fill="#45c6cf" />
+            </svg>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 h-full wave-swell delay-150 opacity-70">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
+              <path d="M0,70 C220,40 360,90 600,60 C840,30 980,80 1200,58 L1200,120 L0,120 Z" fill="#0da79b" />
+            </svg>
+          </div>
+        </div>
+
+        <div className="absolute -right-10 top-6 text-[8.8rem] leading-none drop-shadow-2xl sm:right-8 sm:text-[11rem] palm-sway" aria-hidden="true">🌴</div>
+        <div className="absolute left-5 top-14 text-5xl drop-shadow-xl sm:left-12 sm:text-7xl" aria-hidden="true">☀️</div>
+
+        <div className="absolute bottom-8 left-0 right-0 h-20 bg-gradient-to-t from-[#fff1b4]/70 via-[#3bd4ca]/35 to-transparent" />
+
         <div className="absolute bottom-0 left-0 right-0 h-8">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
-            <path 
-              d="M0,60 C300,100 400,20 600,60 C800,100 900,20 1200,60 L1200,120 L0,120 Z" 
+            <path
+              d="M0,60 C300,110 400,10 600,53 C800,96 900,20 1200,60 L1200,120 L0,120 Z"
               fill="var(--background)"
-              opacity="0.9"
+              opacity="0.92"
             />
           </svg>
         </div>
-        
-        <div className="absolute bottom-4 left-0 right-0 p-4 pb-10 sm:pb-12">
+
+        <div className="absolute bottom-4 left-0 right-0 p-4 pb-12 sm:pb-14">
           <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-white shadow-lg backdrop-blur-md">
             <Palmtree className="w-4 h-4 sm:w-5 sm:h-5 text-primary drop-shadow-lg" />
             <span className="text-xs sm:text-sm font-semibold drop-shadow-lg">Bali VPN • тропический отдых</span>

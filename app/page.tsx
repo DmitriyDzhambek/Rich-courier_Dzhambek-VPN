@@ -11,8 +11,9 @@ import ServersPage from '@/components/vpn/pages/ServersPage';
 import CabinetPage from '@/components/vpn/pages/CabinetPage';
 import ReferralsPage from '@/components/vpn/pages/ReferralsPage';
 import SupportPage from '@/components/vpn/pages/SupportPage';
+import AddDevicePage from '@/components/vpn/pages/AddDevicePage';
 
-type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support';
+type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support' | 'device';
 
 interface SelectedServer {
   country: string;
@@ -57,6 +58,8 @@ export default function Home() {
         return <ReferralsPage />;
       case 'support':
         return <SupportPage />;
+      case 'device':
+        return <AddDevicePage />;
       default:
         return (
           <>

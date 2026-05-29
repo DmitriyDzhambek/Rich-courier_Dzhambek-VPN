@@ -109,6 +109,33 @@ body {
   }
 }
 
+.palm-sway {
+  animation: palm-sway 6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.wave-swell {
+  animation: wave-swell 5s ease-in-out infinite;
+}
+
+@keyframes palm-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg) translateX(2px);
+  }
+}
+
+@keyframes wave-swell {
+  0%, 100% {
+    transform: translateX(-5px) translateY(0px);
+  }
+  50% {
+    transform: translateX(5px) translateY(-3px);
+  }
+}
+
 /* Improve tap targets for mobile */
 button, a {
   -webkit-tap-highlight-color: transparent;
