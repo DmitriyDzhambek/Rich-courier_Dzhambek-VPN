@@ -1,8 +1,8 @@
 'use client';
 
-import { Home, Waves, User, Users, MessageCircle, Smartphone } from 'lucide-react';
+import { Home, Waves, User, Users, MessageCircle, Smartphone, Heart } from 'lucide-react';
 
-type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support' | 'device';
+type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support' | 'device' | 'tips';
 
 interface BottomNavigationProps {
   activeTab: TabType;
@@ -16,6 +16,7 @@ const tabs = [
   { id: 'device' as TabType, label: 'Устройство', icon: Smartphone },
   { id: 'referrals' as TabType, label: 'Рефералы', icon: Users },
   { id: 'support' as TabType, label: 'Поддержка', icon: MessageCircle },
+  { id: 'tips' as TabType, label: 'Чаевые', icon: Heart },
 ];
 
 export default function BottomNavigation({ 
@@ -24,7 +25,7 @@ export default function BottomNavigation({
 }: BottomNavigationProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 border-t border-white/10 bg-card/90 shadow-[0_-18px_45px_rgba(2,44,34,0.35)] backdrop-blur-xl" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
-      <div className="grid grid-cols-6 items-center gap-1 py-2 px-2 max-w-md mx-auto">
+      <div className="grid grid-cols-7 items-center gap-1 py-2 px-2 max-w-md mx-auto">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;

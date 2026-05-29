@@ -123,17 +123,48 @@ body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(3deg) translateX(2px);
+    transform: rotate(4deg) translateX(3px);
   }
 }
 
 @keyframes wave-swell {
   0%, 100% {
-    transform: translateX(-5px) translateY(0px);
+    transform: translateX(-10px) translateY(0px) scaleX(1);
+  }
+  25% {
+    transform: translateX(10px) translateY(-2px) scaleX(1.02);
   }
   50% {
-    transform: translateX(5px) translateY(-3px);
+    transform: translateX(-8px) translateY(-4px) scaleX(1.01);
   }
+  75% {
+    transform: translateX(8px) translateY(-2px) scaleX(1.03);
+  }
+}
+
+.wave-swell.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.wave-swell.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.wave-swell svg path {
+  transition: fill 0.3s ease;
+}
+
+@keyframes sea-glimmer {
+  0%, 100% {
+    opacity: 0.14;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+.sea-glow {
+  animation: sea-glimmer 7s ease-in-out infinite;
 }
 
 /* Improve tap targets for mobile */
