@@ -10,14 +10,17 @@ export default function SupportPage() {
   return (
     <div className="flex flex-col gap-4 px-4 py-6">
       {/* Header */}
-      <div className="flex items-center gap-3 mb-2">
-        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-          <MessageCircle className="w-5 h-5 text-primary" />
+      <div className="flex flex-col gap-2 mb-2">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <MessageCircle className="w-5 h-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold text-foreground">Поддержка</h1>
+            <p className="text-sm text-muted-foreground">Как первый час дня определяет ваш успех</p>
+          </div>
         </div>
-        <div>
-          <h1 className="text-xl font-bold text-foreground">Поддержка</h1>
-          <p className="text-sm text-muted-foreground">Мы всегда готовы помочь</p>
-        </div>
+        <p className="text-sm text-muted-foreground">Тут пока что пусто для новой истории клиентов.</p>
       </div>
 
       {/* Contact Options */}

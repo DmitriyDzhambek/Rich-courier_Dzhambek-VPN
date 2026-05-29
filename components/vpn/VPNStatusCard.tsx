@@ -32,7 +32,7 @@ export default function VPNStatusCard({
             {isConnected ? 'Bali VPN активен' : 'Готов к пляжному интернету'}
           </p>
           <p className="text-sm text-muted-foreground">
-            {isConnected ? 'Безопасный интернет без лишнего шума' : 'Нажмите кнопку, чтобы включить Bali VPN'}
+            {isConnected ? 'Отдыхайте в спокойной сети' : 'Начните день с правильного подключения'}
           </p>
         </div>
       </div>

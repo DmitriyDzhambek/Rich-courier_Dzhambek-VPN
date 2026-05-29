@@ -47,6 +47,9 @@ export default function HeroSection() {
           <p className="mt-2 max-w-xs text-sm font-medium text-white/95 drop-shadow-md sm:text-base">
             Спокойный, защищённый интернет в атмосфере пляжного отдыха
           </p>
+          <p className="mt-4 max-w-xs text-[0.92rem] font-semibold uppercase tracking-[0.15em] text-white/90 drop-shadow-lg">
+            Как первый час дня определяет ваш успех
+          </p>
         </div>
       </div>
     </div>

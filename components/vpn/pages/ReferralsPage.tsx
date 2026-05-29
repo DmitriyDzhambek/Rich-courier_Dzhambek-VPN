@@ -29,29 +29,19 @@ export default function ReferralsPage() {
   return (
     <div className="flex flex-col gap-4 px-4 py-6">
       {/* Header */}
-      <div className="flex items-center gap-3 mb-2">
-        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-          <Users className="w-5 h-5 text-primary" />
+      <div className="flex flex-col gap-2 mb-2">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <Users className="w-5 h-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold text-foreground">Рефералы</h1>
+            <p className="text-sm text-muted-foreground">Как первый час дня определяет ваш успех</p>
+          </div>
         </div>
-        <div>
-          <h1 className="text-xl font-bold text-foreground">Рефералы</h1>
-          <p className="text-sm text-muted-foreground">Приглашай друзей и получай бонусы</p>
-        </div>
+        <p className="text-sm text-muted-foreground">Пока что программа рефералов пустая — скоро станет новой историей.</p>
       </div>
 
-      {/* Stats Cards */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="bg-card rounded-2xl p-4 text-center">
-          <p className="text-3xl font-bold text-primary">5</p>
-          <p className="text-sm text-muted-foreground">Приглашено</p>
-        </div>
-        <div className="bg-card rounded-2xl p-4 text-center">
-          <p className="text-3xl font-bold text-primary">150</p>
-          <p className="text-sm text-muted-foreground">Бонусных дней</p>
-        </div>
-      </div>
-
-      {/* Referral Link */}
       <div className="bg-card rounded-2xl p-5">
         <h3 className="font-semibold text-foreground mb-3">Твоя реферальная ссылка</h3>
         <div className="bg-secondary rounded-xl p-3 flex items-center gap-2 mb-4">
@@ -87,25 +77,14 @@ export default function ReferralsPage() {
         </div>
       </div>
 
-      {/* Rewards */}
-      <div className="bg-gradient-to-r from-primary/20 to-primary/5 border border-primary/30 rounded-2xl p-5">
+      <div className="bg-gradient-to-r from-card/80 via-card to-primary/5 border border-primary/20 rounded-2xl p-5">
         <div className="flex items-center gap-3 mb-4">
           <Gift className="w-6 h-6 text-primary" />
-          <span className="font-bold text-foreground">Награды за рефералов</span>
+          <span className="font-bold text-foreground">Условия рефералов</span>
         </div>
-        <ul className="space-y-3">
-          {[
-            { friends: 1, reward: '+30 дней премиум' },
-            { friends: 5, reward: '+7 дней + бонус скорости' },
-            { friends: 10, reward: '+14 дней + все серверы' },
-            { friends: 25, reward: 'Бесплатный месяц!' },
-          ].map((tier) => (
-            <li key={tier.friends} className="flex items-center justify-between">
-              <span className="text-muted-foreground">{tier.friends} друзей</span>
-              <span className="text-primary font-medium">{tier.reward}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="text-sm text-muted-foreground">
+          Пока премиум-рефералы только готовятся. Награды и условия появятся позже, когда история начнёт свой новый виток.
+        </p>
       </div>
     </div>
   );

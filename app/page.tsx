@@ -26,10 +26,10 @@ export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
   const [selectedServer, setSelectedServer] = useState<SelectedServer>({
-    country: 'Netherlands',
-    city: 'Амстердам',
-    flagUrl: 'https://flagcdn.com/w80/nl.png',
-    ping: '45 ms',
+    country: 'Indonesia',
+    city: 'Кута',
+    flagUrl: 'https://flagcdn.com/w80/id.png',
+    ping: '30 ms',
   });
 
   const handleConnect = () => {

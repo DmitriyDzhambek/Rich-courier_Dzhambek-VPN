@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Bali Курьер VPN',
-  description: 'VPN для отдыха на Бали — быстро, красиво и безопасно',
+  description: 'Bali VPN для курьерского отдыха — новая история Premium и пляжная атмосфера',
   generator: 'v0.app',
   icons: {
     icon: [

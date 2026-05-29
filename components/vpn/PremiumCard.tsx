@@ -17,9 +17,9 @@ export default function PremiumCard({ onClick }: PremiumCardProps) {
           <Crown className="w-5 h-5 text-primary" />
         </div>
         <div className="text-left">
-          <p className="font-semibold text-foreground">Премиум отдых</p>
+          <p className="font-semibold text-foreground">Премиум-история</p>
           <p className="text-xs text-muted-foreground">
-            Максимальная скорость и все VPN-локации
+            пока что пусто — новый курортный путь начнётся позже
           </p>
         </div>
       </div>

@@ -9,59 +9,46 @@ interface CabinetPageProps {
 export default function CabinetPage({ onUpgrade }: CabinetPageProps) {
   return (
     <div className="flex flex-col gap-4 px-4 py-6">
-      {/* Profile Header */}
-      <div className="bg-card rounded-2xl p-5 flex items-center gap-4">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center">
-          <User className="w-8 h-8 text-primary-foreground" />
-        </div>
-        <div className="flex-1">
-          <h2 className="text-lg font-bold text-foreground">Курьер</h2>
-          <p className="text-sm text-muted-foreground">ID: 12345678</p>
-          <div className="flex items-center gap-1 mt-1">
-            <span className="px-2 py-0.5 bg-secondary rounded-full text-xs text-primary font-medium">
-              Бесплатный план
-            </span>
+      <div className="flex flex-col gap-2 mb-2">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <User className="w-5 h-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold text-foreground">Кабинет</h1>
+            <p className="text-sm text-muted-foreground">Как первый час дня определяет ваш успех</p>
           </div>
         </div>
+        <p className="text-sm text-muted-foreground">Премиум-история ещё не начинается. Ваша новая глава скоро будет готова.</p>
       </div>
 
-      {/* Premium Card */}
-      <button 
-        onClick={onUpgrade}
-        className="bg-gradient-to-r from-primary/20 to-primary/5 border border-primary/30 rounded-2xl p-5 text-left hover:border-primary/50 active:scale-[0.98] transition-all"
-      >
+      <div className="bg-card rounded-2xl p-5 text-left">
         <div className="flex items-center gap-3 mb-3">
           <Crown className="w-6 h-6 text-primary" />
-          <span className="font-bold text-foreground">Премиум доступ</span>
+          <span className="font-bold text-foreground">Премиум-путь</span>
         </div>
-        <p className="text-sm text-muted-foreground mb-3">
-          Разблокируйте все серверы и максимальную скорость
+        <p className="text-sm text-muted-foreground mb-4">
+          Здесь появится история подписки и все новые награды для Premium.
         </p>
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-primary">299 руб/мес</span>
-          <ChevronRight className="w-5 h-5 text-muted-foreground" />
-        </div>
-      </button>
+        <button
+          onClick={onUpgrade}
+          className="w-full rounded-2xl bg-primary text-primary-foreground py-3 font-semibold transition hover:brightness-110 active:scale-[0.98]"
+        >
+          Открыть новую историю
+        </button>
+      </div>
 
-      {/* Stats */}
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-card rounded-2xl p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Clock className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">Время подключения</span>
-          </div>
-          <p className="text-xl font-bold text-foreground">24ч 35м</p>
+          <p className="text-sm text-muted-foreground mb-2">План</p>
+          <p className="text-2xl font-bold text-foreground">Пусто</p>
         </div>
         <div className="bg-card rounded-2xl p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Shield className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">Трафик</span>
-          </div>
-          <p className="text-xl font-bold text-foreground">12.5 GB</p>
+          <p className="text-sm text-muted-foreground mb-2">Трафик</p>
+          <p className="text-2xl font-bold text-foreground">—</p>
         </div>
       </div>
 
-      {/* Menu Items */}
       <div className="bg-card rounded-2xl overflow-hidden">
         {[
           { label: 'История подключений', icon: Clock },

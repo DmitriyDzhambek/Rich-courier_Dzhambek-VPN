@@ -26,10 +26,10 @@ export default function ConnectButton({
       )}
       <div className="text-left">
         <p className="font-semibold">
-          {isConnecting ? 'Открываем пляж...' : isConnected ? 'VPN включен' : 'Подключиться'}
+          {isConnecting ? 'Открываем пляж...' : isConnected ? 'VPN включен' : 'Начать пляжный час'}
         </p>
         <p className="text-xs opacity-80">
-          {isConnected ? 'Безопасный отдых онлайн' : 'Запустить быстрый Bali VPN'}
+          {isConnected ? 'Безопасный отдых онлайн' : 'Запустить Bali VPN и зарядиться' }
         </p>
       </div>
     </button>
