@@ -142,18 +142,6 @@ body {
   }
 }
 
-.wave-swell.delay-150 {
-  animation-delay: 0.15s;
-}
-
-.wave-swell.delay-300 {
-  animation-delay: 0.3s;
-}
-
-.wave-swell svg path {
-  transition: fill 0.3s ease;
-}
-
 @keyframes sea-glimmer {
   0%, 100% {
     opacity: 0.14;
@@ -161,6 +149,35 @@ body {
   50% {
     opacity: 0.28;
   }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: calc(1200px + 100%) 0;
+  }
+}
+
+.animate-pulse {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1200px 100%;
+  animation: skeleton-loading 2s infinite;
+}
+
+.wave-swell.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.wave-swell.delay-300 {
+  animation-delay: 0.3s;
 }
 
 .sea-glow {
