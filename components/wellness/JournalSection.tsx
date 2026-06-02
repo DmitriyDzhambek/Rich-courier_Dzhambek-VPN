@@ -27,7 +27,7 @@ export default function JournalSection({ currentTime, currentDate }: JournalSect
         value={note}
         onChange={(event) => setNote(event.target.value)}
         placeholder="Запишите, что важно сегодня..."
-        className="mt-6 h-44 w-full rounded-3xl border border-white/10 bg-[#061a1b] p-4 text-sm text-white outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+        className="journal-input mt-6 h-44 w-full rounded-3xl border border-white/10 bg-[#061a1b] p-4 text-sm text-white outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
       />
 
       <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

@@ -79,6 +79,10 @@ export default function Home() {
     }, 250);
   };
 
+  const handleOpenJournal = () => {
+    handleTabChange('home');
+  };
+
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -116,10 +120,10 @@ export default function Home() {
 
     if (activeTab === 'home') {
       return (
-        <div className="px-4 sm:px-6">
+        <div className="min-h-[100dvh] w-full overflow-y-auto px-4 sm:px-6 pb-28">
           <HeroSection />
 
-          <div className="mx-auto mt-6 max-w-5xl space-y-6 pb-28">
+          <div className="mx-auto mt-6 max-w-5xl space-y-6">
             <section className="rounded-[2rem] border border-white/10 bg-white/10 p-6 text-white shadow-[0_35px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl">
               <p className="text-sm uppercase tracking-[0.3em] text-white/60">Bali</p>
               <h2 className="mt-3 text-3xl font-black sm:text-4xl">Как первый час дня определяет ваш успех</h2>

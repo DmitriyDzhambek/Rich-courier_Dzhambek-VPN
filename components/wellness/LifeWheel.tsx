@@ -114,7 +114,15 @@ export default function LifeWheel() {
 
         {/* Кнопка действия */}
         <motion.div className="flex justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-          <button className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary to-primary/80 px-8 py-4 text-base font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-1 hover:shadow-xl active:scale-95">
+          <button 
+            onClick={() => {
+              const journalInput = document.querySelector('.journal-input') as HTMLTextAreaElement;
+              if (journalInput) {
+                journalInput.focus();
+              }
+            }}
+            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary to-primary/80 px-8 py-4 text-base font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-1 hover:shadow-xl active:scale-95"
+          >
             Начать ведение дневника
             <ArrowRight className="h-5 w-5" />
           </button>

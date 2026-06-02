@@ -73,16 +73,16 @@
   
   body {
     @apply bg-background text-foreground;
-    background:
-      radial-gradient(circle at 12% 8%, rgba(255, 200, 87, 0.32), transparent 26%),
-      radial-gradient(circle at 86% 14%, rgba(49, 231, 207, 0.28), transparent 28%),
-      radial-gradient(circle at 50% 0%, rgba(125, 211, 252, 0.22), transparent 34%),
-      linear-gradient(180deg, #08736b 0%, var(--background) 48%, #032b28 100%);
+    background-image: url('/images/background.jpg'), url('/images/background.svg'), linear-gradient(180deg, #08736b 0%, var(--background) 48%, #032b28 100%);
+    background-size: cover, cover, 100% 100%;
+    background-position: right center, right center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed;
     letter-spacing: 0.3px;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-black tracking-tight;
+    @apply font-poppins font-black tracking-tight;
     letter-spacing: -0.5px;
   }
   
