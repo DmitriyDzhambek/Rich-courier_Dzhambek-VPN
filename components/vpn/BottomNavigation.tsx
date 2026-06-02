@@ -1,9 +1,9 @@
 'use client';
 
-import { Home, Waves, User, Users, MessageCircle, Smartphone, Heart } from 'lucide-react';
+import { Home, HeartPulse, Activity, Zap, DollarSign, Compass, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-type TabType = 'home' | 'servers' | 'cabinet' | 'referrals' | 'support' | 'device' | 'tips';
+type TabType = 'home' | 'stress' | 'health' | 'energy' | 'earnings' | 'purpose' | 'productivity';
 
 interface BottomNavigationProps {
   activeTab: TabType;
@@ -12,12 +12,12 @@ interface BottomNavigationProps {
 
 const tabs = [
   { id: 'home' as TabType, label: 'Главная', icon: Home },
-  { id: 'servers' as TabType, label: 'Сервис', icon: Waves },
-  { id: 'cabinet' as TabType, label: 'Кабинет', icon: User },
-  { id: 'device' as TabType, label: 'Устройство', icon: Smartphone },
-  { id: 'referrals' as TabType, label: 'Рефералы', icon: Users },
-  { id: 'support' as TabType, label: 'Поддержка', icon: MessageCircle },
-  { id: 'tips' as TabType, label: 'Чаевые', icon: Heart },
+  { id: 'stress' as TabType, label: 'Снизить стресс', icon: HeartPulse },
+  { id: 'health' as TabType, label: 'Здоровье', icon: Activity },
+  { id: 'energy' as TabType, label: 'Энергия', icon: Zap },
+  { id: 'earnings' as TabType, label: 'Заработок', icon: DollarSign },
+  { id: 'purpose' as TabType, label: 'Призвание', icon: Compass },
+  { id: 'productivity' as TabType, label: 'Продуктивность', icon: Target },
 ];
 
 export default function BottomNavigation({ 
@@ -27,7 +27,7 @@ export default function BottomNavigation({
   return (
     <div className="fixed bottom-0 left-0 right-0 border-t border-white/10 bg-card/90 shadow-[0_-18px_45px_rgba(2,44,34,0.35)] backdrop-blur-xl" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="grid grid-cols-7 items-center gap-1 py-2 px-2 max-w-md mx-auto">
-        {tabs.map((tab, index) => {
+        {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
           return (
@@ -53,7 +53,7 @@ export default function BottomNavigation({
                 <Icon className="w-5 h-5" />
               </motion.div>
               <motion.span 
-                className="text-[10px] font-medium"
+                className="text-[8px] font-medium leading-none sm:text-[10px]"
                 animate={isActive ? { opacity: 1 } : { opacity: 0.7 }}
               >
                 {tab.label}

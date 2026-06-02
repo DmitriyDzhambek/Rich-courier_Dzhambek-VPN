@@ -32,7 +32,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+  --font-sans: 'Poppins', 'Geist', 'Geist Fallback', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -63,6 +63,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: var(--font-poppins, var(--font-sans));
+  }
+  
   body {
     @apply bg-background text-foreground;
     background:
@@ -70,6 +78,16 @@
       radial-gradient(circle at 86% 14%, rgba(49, 231, 207, 0.28), transparent 28%),
       radial-gradient(circle at 50% 0%, rgba(125, 211, 252, 0.22), transparent 34%),
       linear-gradient(180deg, #08736b 0%, var(--background) 48%, #032b28 100%);
+    letter-spacing: 0.3px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight;
+    letter-spacing: -0.5px;
+  }
+  
+  p, span, div {
+    letter-spacing: 0.2px;
   }
 }
 
