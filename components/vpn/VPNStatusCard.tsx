@@ -1,20 +1,17 @@
 'use client';
 
-import { Anchor, Ship } from 'lucide-react';
+import { Anchor, Ship, Activity } from 'lucide-react';
+import type { ConnectionStats } from '@/lib/types';
+import { formatBytes, formatPing, formatSpeed } from '@/lib/format';
+import EmptyState from '@/components/vpn/EmptyState';
 
 interface VPNStatusCardProps {
   isConnected: boolean;
-  ping: string;
-  speed: string;
-  traffic: string;
+  /** Real-time metrics from the VPN client. Null when nothing is measured yet. */
+  stats: ConnectionStats | null;
 }
 
-export default function VPNStatusCard({ 
-  isConnected, 
-  ping, 
-  speed, 
-  traffic 
-}: VPNStatusCardProps) {
+export default function VPNStatusCard({ isConnected, stats }: VPNStatusCardProps) {
   return (
     <div className="bg-card rounded-2xl p-3 sm:p-4">
       <div className="flex items-center gap-3 mb-4">
@@ -36,21 +33,36 @@ export default function VPNStatusCard({
           </p>
         </div>
       </div>
-      
-      <div className="flex justify-between border-t border-border pt-4">
-        <div className="text-center flex-1">
-          <p className="text-xs text-muted-foreground mb-1">Пинг</p>
-          <p className="font-semibold text-foreground">{ping}</p>
+
+      {stats ? (
+        <div className="flex justify-between border-t border-border pt-4">
+          <div className="text-center flex-1">
+            <p className="text-xs text-muted-foreground mb-1">Пинг</p>
+            <p className="font-semibold text-foreground">{formatPing(stats.pingMs)}</p>
+          </div>
+          <div className="text-center flex-1 border-x border-border">
+            <p className="text-xs text-muted-foreground mb-1">Скорость</p>
+            <p className="font-semibold text-foreground">{formatSpeed(stats.speedMbps)}</p>
+          </div>
+          <div className="text-center flex-1">
+            <p className="text-xs text-muted-foreground mb-1">Трафик</p>
+            <p className="font-semibold text-foreground">{formatBytes(stats.trafficBytes)}</p>
+          </div>
         </div>
-        <div className="text-center flex-1 border-x border-border">
-          <p className="text-xs text-muted-foreground mb-1">Скорость</p>
-          <p className="font-semibold text-foreground">{speed}</p>
+      ) : (
+        <div className="border-t border-border pt-3">
+          <EmptyState
+            compact
+            icon={Activity}
+            title={isConnected ? 'Собираем статистику' : 'Нет данных о соединении'}
+            description={
+              isConnected
+                ? 'Пинг, скорость и трафик появятся, как только их передаст VPN-клиент.'
+                : 'Пинг, скорость и трафик будут показаны после подключения.'
+            }
+          />
         </div>
-        <div className="text-center flex-1">
-          <p className="text-xs text-muted-foreground mb-1">Трафик</p>
-          <p className="font-semibold text-foreground">{traffic}</p>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
