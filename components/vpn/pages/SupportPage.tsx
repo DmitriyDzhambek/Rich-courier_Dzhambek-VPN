@@ -1,6 +1,7 @@
 'use client';
 
 import { MessageCircle, Send, FileText, HelpCircle, ExternalLink } from 'lucide-react';
+import EmptyState from '@/components/vpn/EmptyState';
 
 export default function SupportPage() {
   const openTelegram = (username: string) => {
@@ -31,7 +32,7 @@ export default function SupportPage() {
           </div>
           <div className="flex-1 text-left">
             <p className="font-semibold text-foreground">Написать в Telegram</p>
-            <p className="text-sm text-muted-foreground">Быстрый ответ в течение часа</p>
+            <p className="text-sm text-muted-foreground">Чат с поддержкой</p>
           </div>
           <ExternalLink className="w-5 h-5 text-muted-foreground" />
         </button>
@@ -61,7 +62,7 @@ export default function SupportPage() {
         </div>
         <div className="space-y-4">
           {[
-            { q: 'Как подключиться к VPN?', a: 'Нажмите кнопку "Подключиться" на главном экране' },
+            { q: 'Как подключиться к VPN?', a: 'Нажмите кнопку "Отплыть" на главном экране' },
             { q: 'Как сменить сервер?', a: 'Перейдите во вкладку "Серверы" и выберите нужный' },
             { q: 'Что дает премиум?', a: 'Доступ ко всем серверам и максимальная скорость' },
             { q: 'Как получить бесплатные дни?', a: 'Приглашайте друзей через раздел "Рефералы"' },
@@ -75,16 +76,12 @@ export default function SupportPage() {
       </div>
 
       {/* Documentation */}
-      <button className="bg-card rounded-2xl p-4 flex items-center gap-4 hover:bg-card/80 transition-colors active:scale-[0.98]">
-        <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-          <FileText className="w-6 h-6 text-muted-foreground" />
-        </div>
-        <div className="flex-1 text-left">
-          <p className="font-semibold text-foreground">Документация</p>
-          <p className="text-sm text-muted-foreground">Подробные инструкции по настройке</p>
-        </div>
-        <ExternalLink className="w-5 h-5 text-muted-foreground" />
-      </button>
+      <EmptyState
+        compact
+        icon={FileText}
+        title="Документация готовится"
+        description="Подробные инструкции по настройке появятся здесь. Пока — напишите в поддержку."
+      />
     </div>
   );
 }

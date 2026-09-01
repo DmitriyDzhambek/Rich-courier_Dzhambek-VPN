@@ -5,14 +5,29 @@ import { Sailboat, Anchor } from 'lucide-react';
 interface ConnectButtonProps {
   isConnected: boolean;
   isConnecting: boolean;
+  hasServer: boolean;
   onConnect: () => void;
 }
 
 export default function ConnectButton({ 
   isConnected, 
   isConnecting,
+  hasServer,
   onConnect 
 }: ConnectButtonProps) {
+  const title = isConnecting
+    ? 'Отплываем...'
+    : isConnected
+      ? 'Бросить якорь'
+      : hasServer
+        ? 'Отплыть'
+        : 'Выбрать сервер';
+  const subtitle = isConnected
+    ? 'Остановить плавание'
+    : hasServer
+      ? 'Выйти в открытое море'
+      : 'Сначала выберите порт назначения';
+
   return (
     <button
       onClick={onConnect}
@@ -25,12 +40,8 @@ export default function ConnectButton({
         <Sailboat className={`w-5 h-5 ${isConnecting ? 'animate-pulse' : ''}`} />
       )}
       <div className="text-left">
-        <p className="font-semibold">
-          {isConnecting ? 'Отплываем...' : isConnected ? 'Бросить якорь' : 'Отплыть'}
-        </p>
-        <p className="text-xs opacity-80">
-          {isConnected ? 'Остановить плавание' : 'Выйти в открытое море'}
-        </p>
+        <p className="font-semibold">{title}</p>
+        <p className="text-xs opacity-80">{subtitle}</p>
       </div>
     </button>
   );
